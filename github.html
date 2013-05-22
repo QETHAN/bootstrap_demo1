@@ -1,0 +1,151 @@
+<html>
+<head>
+	<title>前端社区</title>
+	<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap-responsive.css">
+	<link rel="author" content="https://plus.google.com/u/0/112079569323185133193/about">
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="shortcut icon" href="github1.png">
+	-->
+	<link rel="shortcut icon" type="image/x-icon" href="https://lh4.googleusercontent.com/-bVeLjJQprsI/UW-fy9l1PmI/AAAAAAAAABw/jfbNWEMwA_g/w506-h508-o/IMG_0035.jpg">
+	<link rel="dns-prefetch" href="http://127.0.0.1/">
+	<style type="text/css">
+/**/
+		.feed_link {
+			float: right;
+			margin-top: -50px;
+			margin-right: 10px;
+		}
+		.feed_link a.feed {
+			width: auto;
+			padding-left: 18px;
+			color: #B94E22;
+		}
+		.feed_link a {
+			text-decoration: none;
+		}
+		.feed_link .icon {
+			margin-bottom: 3px;
+		}
+		.icon_rss {
+			width: 26px;
+			height: 26px;
+			/*background: url("http://www.iheima.com/uploadfile/2012/1016/20121016064107576.jpg");*/
+		}
+		.icon {
+			display: inline-block;
+		}
+
+		#main {
+			position: relative;
+		}
+
+		.container-fluid>.content {
+			margin-left: 0;
+			margin-right: 260px;
+		}
+
+		.box {
+			background-color: #eeeeee;
+			padding: 10px;
+			margin: 0 0 20px 0;
+			-webkit-border-radius: 6px;
+			-moz-border-radius: 6px;
+			border-radius: 6px;
+			-webkit-box-shadow: 0 0px 2px rgba(0,0,0,0.05);
+			-moz-box-shadow: 0 0px 2px rgba(0,0,0,0.1);
+			box-shadow: 0 0px 2px rgba(0,0,0,0.05);
+		}
+
+		.container>.sidebar {
+			background-color: #eeeeee;
+			margin-left: 0;
+			margin-top: -40px;
+			margin-right: 0px;
+			width: 140px;
+			height: 200px;
+		}
+	</style>
+</head>
+
+<body data-offset="140">
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				
+				<a class="brand" href="#">
+					<img style="width:49px;height:20px;" src="./github3.jpeg"></a>
+					<ul class="nav">
+						<li class="active">
+							<a href="#">Home</a>
+						</li>
+						<li>
+							<a href="#">社区</a>
+						</li>
+						<li>
+							<a href="#">Wiki</a>
+						</li>
+						<li>
+							<a href="#">伪Geek</a>
+						</li>
+					</ul>
+					<form class="navbar-form pull-left">
+						<input type="text" name="q" style="height:30px;" class="span3" placeholder="搜索"></form>
+					<ul class="nav pull-right">
+						<li class="first">
+							<a href="#">注册</a>
+						</li>
+						<li class="last">
+							<a href="#">登录</a>
+						</li>
+					</ul>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="container" style="padding-top:60px;">
+		<div id="catalog">
+			<ul class="breadcrumb menu clearfix">
+				<li class="first">
+					<a href="#">Home</a>
+					<span class="divider">/</span>
+				</li>
+				<li>
+					<a href="#">Topic</a>
+					<span class="divider">/</span>
+				</li>
+				<li>
+					<a href="#">Node</a>
+					<span class="divider">/</span>
+				</li>
+				<li class="last active">
+					<a href="#">浏览</a>
+				</li>
+			</ul>
+		</div>
+		<div class="feed_link">
+			<a href="#" class="feed" title="订阅RSS">
+				<img class="icon icon_rss" src="http://www.iconpng.com/png/bluish/rss.png">
+				Feed
+			</a>
+		</div>
+		<div id="main" class="container-fluid">
+			<div class="content">
+				<div id="topic_show" class="topics box hfeed">
+
+				</div>
+			</div>
+		</div>
+		<div class="sidebar pull-right">
+			<div class="box">
+
+			</div>
+		</div>
+	</div>
+<script src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//cdnjs.bootcss.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
