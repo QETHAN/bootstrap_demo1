@@ -61,7 +61,7 @@
 		}
 
 		.box_gray {
-			background: #f5f5f5;
+			background-color: #eeeeee;
 		}
 		.row-fluid>.sidebar {
 			background-color: #eeeeee;
@@ -92,7 +92,7 @@
 			text-decoration: none;
 			background-color: #f5f5f5; 
 		}
-		#topic .entry-content {
+		#topic .entry-content{
 			position: relative;
 			line-height: 160%;
 			font-size: 14px;
@@ -139,14 +139,42 @@
 			margin: 0 -10px;
 		}
 
+		#replies .items {
+			background-color: #ffffff;
+		}
+		#replies .reply {
+			border-bottom: 1px solid #DDD;
+			padding: 8px 10px;
+			margin: 0 -10px;
+			background: #ffffff;
+		}
 		#replies .reply .face {
-			padding-top: 8px;
+			margin-top: -2px;
 			padding-right: 8px;
 			width: 48px;
+			height: 48px;
 			margin-left: 0;
 		}
 
+		abbr[title] {
+			border: 0;
+			cursor: default;
+		}
+		#replies .reply .replyinfos {
+			padding-left: 58px;
+		}
+		#replies .reply .replyinfos .replyinfo {
+			font-size: 12px;
+			color: #bbb;
+		}
 
+		#replies .reply-content {
+			position: relative;
+			line-height: 160%;
+			font-size: 14px;
+			text-overflow: ellipsis;
+			word-wrap: break-word;
+		}
 	</style>
 </head>
 
@@ -278,13 +306,65 @@
 					<div class="reply" id="reply1">
 						<div class="pull-left face">
 							<a href="#">
-								<img alt="reply1" class="uface" src="https://lh4.googleusercontent.com/-bVeLjJQprsI/UW-fy9l1PmI/AAAAAAAAABw/jfbNWEMwA_g/w506-h508-o/IMG_0035.jpg" style="width:48px;height:48px;">
+								<img alt="reply1" class="uface" src="https://lh4.googleusercontent.com/-bVeLjJQprsI/UW-fy9l1PmI/AAAAAAAAABw/jfbNWEMwA_g/w506-h508-o/IMG_0035.jpg" >
 							</a>
 						</div>
 						<div class="replyinfos">
 							<div class="replyinfo">
-								<span class="name"></span>
+								<span class="name">
+									<a href="#" data-name="ethan">ethan</a>
+									   1楼,
+									<abbr class="timeago" title="">1秒前</abbr>
+								</span>
 								<span class="opts"></span>
+							</div>
+							<div class="reply-content">
+								coffeeScript --------->
+							</div>
+						</div>
+					</div>
+
+					<div class="reply" id="reply2">
+						<div class="pull-left face">
+							<a href="#">
+								<img alt="reply2" class="uface" src="https://lh4.googleusercontent.com/-bVeLjJQprsI/UW-fy9l1PmI/AAAAAAAAABw/jfbNWEMwA_g/w506-h508-o/IMG_0035.jpg" style="width:48px;height:48px;">
+							</a>
+						</div>
+						<div class="replyinfos">
+							<div class="replyinfo">
+								<span class="name">
+									<a href="#" data-name="ethan">lee</a>
+									   2楼,
+									<abbr class="timeago" title="">2秒前</abbr>
+								</span>
+								<span class="opts"></span>
+							</div>
+							<div class="reply-content">
+								许多 JavaScript 的陈述句皆可在 CoffeeScript 中视为表达式。例如，if, switch 与 for 等。这些控制陈述句也有后缀的版本。
+CoffeeScript 的一般原则，是可以省略许多不必要的括号和大括号，可以使用缩排来取代。可以以隐喻方式呼叫函数（在 JavaScript 中呼叫函数所需的括号可以被省略），物件文字通常可以自动侦测。
+							</div>
+						</div>
+					</div>
+
+					<div class="reply" id="reply3">
+						<div class="pull-left face">
+							<a href="#">
+								<img alt="reply3" class="uface" src="https://lh4.googleusercontent.com/-bVeLjJQprsI/UW-fy9l1PmI/AAAAAAAAABw/jfbNWEMwA_g/w506-h508-o/IMG_0035.jpg" >
+							</a>
+						</div>
+						<div class="replyinfos">
+							<div class="replyinfo">
+								<span class="name">
+									<a href="#" data-name="ethan">LBJ</a>
+									   3楼,
+									<abbr class="timeago" title="">1秒前</abbr>
+								</span>
+								<span class="opts"></span>
+							</div>
+							<div class="reply-content">
+								CoffeeScript 的编译器在 0.5 版本之后由 CoffeeScript 本身写成，为 Node.js 里的一个工具程式。但核心程式码并不依赖 Node.js，且可直接在任何支援 JavaScript 的环境中使用。[8]此外，可以使用 Coffee Maven Plugin 作为 Node.js 之外的替代方案，这是 Apache Maven 建置工具的外挂，由 Rhino JavaScript 引擎并以 Java 语言写成。
+在 CoffeeScript.org 官方网站的选单上有“Try CoffeeScript”按钮，可以让使用者直接输入 CoffeeScript 程式码并直接在浏览器上编译成 JavaScript。另外一个网站“jscoffee[9]”提供双向转译的功能。
+
 							</div>
 						</div>
 					</div>
