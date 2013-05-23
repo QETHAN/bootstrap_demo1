@@ -48,6 +48,15 @@
 			background-color: #eeeeee;
 		}
 
+		h1 {
+			font-size: 22px;
+			color: #333;
+			text-align: left;
+			line-height: 100%;
+			margin-bottom: 8px;
+		}
+
+
 		.box {
 			background-color: #eeeeee;
 			padding: 10px;
@@ -62,14 +71,6 @@
 
 		.box_gray {
 			background-color: #eeeeee;
-		}
-		.row-fluid>.sidebar {
-			background-color: #eeeeee;
-		/*	margin-left: 0;
-			margin-top: -40px;
-			margin-right: 0px;
-			width: 140px;
-			height: 200px;*/
 		}
 
 		.infos {
@@ -174,6 +175,17 @@
 			font-size: 14px;
 			text-overflow: ellipsis;
 			word-wrap: break-word;
+		}
+		.box h2.title {
+			font-size: 12px;
+			margin: 0 -10px;
+			padding: 0 10px;
+			margin-bottom: 8px;
+			color: #999;
+			line-height: 100%;
+			border-bottom: 1px solid #ddd;
+			padding-bottom: 8px;
+			text-align: center;
 		}
 	</style>
 </head>
@@ -290,8 +302,25 @@
 
 			</div>
 
-			<div class="sidebar span4 box">
-				<div class="box"></div>
+			<div class="sidebar span4">
+				<div class="box">
+					<h2 class="title">便利贴</h2>
+					<div class="side-content">
+						跟着心在前端和艺术的道路上奔跑起来吧
+					</div>
+				</div>
+				<div class="box">
+					<h2 class="title">看看其他人的话题</h2>
+					<ul>
+						<li>
+							<a href="#" title="如果使用git">如果使用git</a>
+						</li>
+						<li>
+							<a href="#" title="开始github之旅">开始github之旅</a>
+						</li>
+					</ul>
+				</div>
+
 			</div>
 
 		</div>
@@ -299,7 +328,7 @@
 			<div class="span8 box box_gray">
 				<div class="total">
 					共收到 
-					<strong> n <strong/>
+					<strong> n </strong>
 					条回复
 				</div>
 				<div class="items">
