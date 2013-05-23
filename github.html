@@ -38,12 +38,14 @@
 		}
 
 		#main {
-			position: relative;
+			/*position: relative;*/
+			/*background-color: #eeeeee;*/
 		}
 
-		.container-fluid>.content {
-			margin-left: 0;
-			margin-right: 260px;
+		.row-fluid>.content {
+		/*	margin-left: 0;
+			margin-right: 260px;*/
+			background-color: #eeeeee;
 		}
 
 		.box {
@@ -58,14 +60,93 @@
 			box-shadow: 0 0px 2px rgba(0,0,0,0.05);
 		}
 
-		.container>.sidebar {
+		.box_gray {
+			background: #f5f5f5;
+		}
+		.row-fluid>.sidebar {
 			background-color: #eeeeee;
-			margin-left: 0;
+		/*	margin-left: 0;
 			margin-top: -40px;
 			margin-right: 0px;
 			width: 140px;
-			height: 200px;
+			height: 200px;*/
 		}
+
+		.infos {
+			position: relative;
+			margin-bottom: 10px;
+			margin-right: 56px;
+			border-bottom: 1px solid #ddd;
+			margin: 0 -10px;
+			padding: 0 10px 5px 10px;
+		}
+
+		.topic .info {
+			color: #bbb;
+			margin-bottom: 2px;
+			font-size: 12px;
+		}
+		.topic .info .node {
+			padding: 1px 5px;
+			color: #778087;
+			text-decoration: none;
+			background-color: #f5f5f5; 
+		}
+		#topic .entry-content {
+			position: relative;
+			line-height: 160%;
+			font-size: 14px;
+			text-overflow: ellipsis;
+			word-wrap: break-word;
+			margin-bottom: 10px;
+			margin-top: 18px;
+		}
+		.entry-content h4 {
+			font-weight: bold;
+			font-size: 15px;
+			line-height: 100%;
+			margin: 0;
+			color: #222;
+			margin-top: 20px;
+			border-left: 15px solid #ddd;
+			padding-left: 5px;
+			margin-bottom: 8px;
+		}
+		hr {
+			margin: 18px 0;
+			border: 0;
+			border-top: 1px solid #f0ffff;
+			border-bottom: 1px solid #f7f7f7;
+		}
+
+		blockquote {
+			padding: 0 0 0 15px;
+			margin: 0 0 18px;
+			border-left: 5px solid #ddd;
+		}
+
+		blockquote p {
+			font-size: 13px;
+			color: #666;
+			font-weight: normal;
+			line-height: 150%;
+		}
+
+		#replies .total {
+			padding: 0 10px 6px 10px;
+			border-bottom: 1px solid #DDD;
+			color: #999;
+			margin: 0 -10px;
+		}
+
+		#replies .reply .face {
+			padding-top: 8px;
+			padding-right: 8px;
+			width: 48px;
+			margin-left: 0;
+		}
+
+
 	</style>
 </head>
 
@@ -74,41 +155,41 @@
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				
+
 				<a class="brand" href="#">
 					<img style="width:49px;height:20px;" src="./github3.jpeg"></a>
-					<ul class="nav">
-						<li class="active">
-							<a href="#">Home</a>
-						</li>
-						<li>
-							<a href="#">社区</a>
-						</li>
-						<li>
-							<a href="#">Wiki</a>
-						</li>
-						<li>
-							<a href="#">伪Geek</a>
-						</li>
-					</ul>
-					<form class="navbar-form pull-left">
-						<input type="text" name="q" style="height:30px;" class="span3" placeholder="搜索"></form>
-					<ul class="nav pull-right">
-						<li class="first">
-							<a href="#">注册</a>
-						</li>
-						<li class="last">
-							<a href="#">登录</a>
-						</li>
-					</ul>
+				<ul class="nav">
+					<li class="active">
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">社区</a>
+					</li>
+					<li>
+						<a href="#">Wiki</a>
+					</li>
+					<li>
+						<a href="#">伪Geek</a>
+					</li>
+				</ul>
+				<form class="navbar-form pull-left">
+					<input type="text" name="q" style="height:30px;" class="span3" placeholder="搜索"></form>
+				<ul class="nav pull-right">
+					<li class="first">
+						<a href="#">注册</a>
+					</li>
+					<li class="last">
+						<a href="#">登录</a>
+					</li>
+				</ul>
 			</div>
 
 		</div>
 	</div>
 
-	<div class="container" style="padding-top:60px;">
+	<div class="container-fluid" style="padding-top:60px;">
 		<div id="catalog">
-			<ul class="breadcrumb menu clearfix">
+			<ul class="breadcrumb">
 				<li class="first">
 					<a href="#">Home</a>
 					<span class="divider">/</span>
@@ -121,31 +202,98 @@
 					<a href="#">Node</a>
 					<span class="divider">/</span>
 				</li>
-				<li class="last active">
-					<a href="#">浏览</a>
-				</li>
+				<li class="active">浏览</li>
 			</ul>
 		</div>
 		<div class="feed_link">
 			<a href="#" class="feed" title="订阅RSS">
-				<img class="icon icon_rss" src="http://www.iconpng.com/png/bluish/rss.png">
-				Feed
-			</a>
+				<img class="icon icon_rss" src="http://www.iconpng.com/png/bluish/rss.png">Feed</a>
 		</div>
-		<div id="main" class="container-fluid">
-			<div class="content">
-				<div id="topic_show" class="topics box hfeed">
+		<div class="row-fluid">
+			<div class="content span8 box">
+				<div id="topic">
+					<div class="infos">
+						<div class="avata_large pull-right">
+							<a href="#">
+								<img alt="me" class="uface" src="https://lh4.googleusercontent.com/-bVeLjJQprsI/UW-fy9l1PmI/AAAAAAAAABw/jfbNWEMwA_g/w506-h508-o/IMG_0035.jpg" style="width:48px;height:48px;">
+							</a>
+						</div>
+						<h1 class="entry-title">伪前端，伪Geek</h1>
+						<div class="info leader">
+							<a href="#" class="node">JavaScript</a>
+							 •
+							<a href="#" data-name="QETHAN">QETHAN</a>
+							 • 于
+							<abbr class="timeago" title>一光年前</abbr>
+							发布
+							 • 
+							最后由 
+							<a href="#" data-name="git">git</a>
+							回复
+							 • 
+							0次阅读 
+						</div>
+					</div>
+					<div class="entry-content">
+						<p>
+							自诩为程序员一枚，热爱前端开发，实力不济，资历甚微。 热爱github，实属伪Geek。
+							即使挫折无数，也会走在前端的路上
+						</p>
+						<hr>
+						<h4>序</h4>
+						<hr>
+						<blockquote>
+							<p>
+								GitHub 是一个用于使用Git版本控制系统项目的共享虚拟主机服务。它由GitHub公司（曾称Logical Awesome）的开发者Chris Wanstrath、PJ Hyett和Tom Preston-Werner使用Ruby on Rails编写而成。
+								GitHub同时提供付费账户和为开源项目提供的免费账户。根据在2009年的Git用户调查，GitHub是最流行的Git存取站点。[2]它提供了像feeds、followers和显示开发者们怎样在他们版本库上的版本工作的网络图表。
+								GitHub也提供一个粘贴箱风格的站点，个人信息库和网页使用Wiki，通过一个git版本库即可对这些页面进行编辑。
+								截至2010年1月，GitHub仍然由GitHub公司所经营。
+							</p>
+						</blockquote>
 
+						<p>
+							CoffeeScript 是一套 JavaScript 的转译语言。受到 Ruby、Python 与 Haskell 等语言的启发[1]，CoffeeScript 增强了 JavaScript 的简洁性与可读性。此外，CoffeeScript 也新增了更复杂的功能，例如列表综合（List comprehension）、类型比对（Pattern matching）等。一般来说，CoffeeScript 可以在不影响执行效能的情况下，缩短约三分之一的程式码长度[3]。自从2011年6月以来，CoffeeScript 已经是 GitHub 上最受瞩目的专案之一。
+							<br/>
+							<br/>
+							2009年12月3日，Jeremy Ashkenas 在 Git 上对 CoffeeScript 做出了第一笔提交“这是这个神秘语言最初的提交。（initial commit of the mystery language.）”[5]当时的编译器由 Ruby 语言所写成。在同年12月24日，Ashkenas 做出了第一个上标签与归档的版本－0.1.0。2010年2月21日，他释出了 0.5 版，此版本将原先由 Ruby 撰写的编译器改写为纯 CoffeeScript 撰写。当时吸引了 GitHub 上的许多贡献者，每日约有 300 人次造访该专案的页面。2010年12月24日，Askenas 释出了 1.0.0 稳定版本，并在 Hacker News 上发表。Hacker News 也是当时此专案第一次发表的网站。
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="sidebar span4 box">
+				<div class="box"></div>
+			</div>
+
+		</div>
+		<div id="replies" class="row-fluid">
+			<div class="span8 box box_gray">
+				<div class="total">
+					共收到 
+					<strong> n <strong/>
+					条回复
+				</div>
+				<div class="items">
+					<div class="reply" id="reply1">
+						<div class="pull-left face">
+							<a href="#">
+								<img alt="reply1" class="uface" src="https://lh4.googleusercontent.com/-bVeLjJQprsI/UW-fy9l1PmI/AAAAAAAAABw/jfbNWEMwA_g/w506-h508-o/IMG_0035.jpg" style="width:48px;height:48px;">
+							</a>
+						</div>
+						<div class="replyinfos">
+							<div class="replyinfo">
+								<span class="name"></span>
+								<span class="opts"></span>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="sidebar pull-right">
-			<div class="box">
-
-			</div>
-		</div>
 	</div>
-<script src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="//cdnjs.bootcss.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+
+	<script src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="//cdnjs.bootcss.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
